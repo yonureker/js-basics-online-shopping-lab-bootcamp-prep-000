@@ -49,7 +49,11 @@ function viewCart() {
 
 
 function total() {
-  // write your code here
+    var totalValue = 0;
+    for (var i = 0; i < cart.length; i++) {
+        totalValue += Object.values(cart[i])[0]
+    }
+    return totalValue;
 }
 
 function removeFromCart(itemX){
